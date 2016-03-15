@@ -61,6 +61,22 @@ loginApp.config([
                     }
 
                 }
+            }).state('publishers', {
+                url: "/publishers",
+                controller: "PublishersCtrl",
+                templateUrl: "app/publishers/partials/publishers.html",
+                resolve: {
+                    loginRequired: loginRequired,
+                    publishers: function ($ocLazyLoad) {
+                        return $ocLazyLoad.load({
+                            name: "publishers",
+                            files: [
+                                "app/publishers/publishersModule.js"
+                            ]
+                        });
+                    }
+
+                }
             });
 
         $locationProvider.html5Mode(true);
@@ -75,6 +91,8 @@ loginApp.controller('LayoutCtrl', [
         }, function(result) {
             //error; cannot fetch info for logged user
         });
+
+    
 
         $scope.logOut = function () {
             authService.logOut();

@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -129,6 +130,8 @@
     <Content Include="app\login\controllers\loginCtrl.js" />
     <Content Include="app\login\loginModule.js" />
     <Content Include="app\login\partials\login.html" />
+    <Content Include="app\publishers\partials\publishers.html" />
+    <Content Include="app\publishers\publishersModule.js" />
     <Content Include="assets\plugins\font-awesome\.gitignore" />
     <Content Include="assets\plugins\font-awesome\css\font-awesome.css" />
     <Content Include="assets\plugins\font-awesome\css\font-awesome.min.css" />
