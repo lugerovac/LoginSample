@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace InfoNovitas.LoginSample.Web.Api.Models.Publishers
+namespace InfoNovitas.LoginSample.Services.Messaging.Views.Publishers
 {
-    public class PublisherViewModel
+    public class Publisher
     {
         public int Id { get; set; }
         public string Name { get; set; }

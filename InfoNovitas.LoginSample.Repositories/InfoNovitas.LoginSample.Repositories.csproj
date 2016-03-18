@@ -48,6 +48,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseModel\eKnjiznicaDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eKnjiznicaDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\eKnjiznicaDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eKnjiznicaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\eKnjiznicaDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eKnjiznicaDB.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseModel\LoginSampleModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,11 +78,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginSampleModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseModel\Publisher.cs">
+      <DependentUpon>eKnjiznicaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseModel\UserInfo.cs">
       <DependentUpon>LoginSampleModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="IPublisherRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUserRepository.cs" />
+    <Compile Include="Publishers\PublisherRepository.cs" />
     <Compile Include="Users\UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,12 +99,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="DatabaseModel\eKnjiznicaDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>eKnjiznicaDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DatabaseModel\eKnjiznicaDB.edmx.diagram">
+      <DependentUpon>eKnjiznicaDB.edmx</DependentUpon>
+    </None>
     <None Include="DatabaseModel\LoginSampleModel.edmx.diagram">
       <DependentUpon>LoginSampleModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DatabaseModel\eKnjiznicaDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>eKnjiznicaDB.edmx</DependentUpon>
+      <LastGenOutput>eKnjiznicaDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DatabaseModel\eKnjiznicaDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>eKnjiznicaDB.edmx</DependentUpon>
+      <LastGenOutput>eKnjiznicaDB.cs</LastGenOutput>
+    </Content>
     <Content Include="DatabaseModel\LoginSampleModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LoginSampleModel.edmx</DependentUpon>

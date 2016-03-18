@@ -6,8 +6,3 @@
     CONSTRAINT [FK_UserLogin_User] FOREIGN KEY ([UserId]) REFERENCES [dbo].[User] ([Id]) ON DELETE CASCADE
 );
 
-
-GO
-CREATE NONCLUSTERED INDEX [IX_UserId]
-    ON [dbo].[UserLogin]([UserId] ASC);
-

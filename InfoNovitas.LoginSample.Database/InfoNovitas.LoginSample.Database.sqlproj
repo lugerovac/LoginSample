@@ -59,18 +59,23 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Scripts\" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
-    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\PostDeploy.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Role.sql" />
     <Build Include="dbo\Tables\User.sql" />
     <Build Include="dbo\Tables\UserClaim.sql" />
+    <Build Include="dbo\Tables\UserInfo.sql" />
     <Build Include="dbo\Tables\UserLogin.sql" />
     <Build Include="dbo\Tables\UserRegistrationToken.sql" />
     <Build Include="dbo\Tables\UserRole.sql" />
-    <Build Include="dbo\Tables\UserInfo.sql" />
-    <PostDeploy Include="Scripts\PostDeploy.sql" />
+    <Build Include="dbo\Tables\Publisher.sql" />
+    <Build Include="dbo\Tables\PublisherPhoneNumbers.sql" />
+    <Build Include="dbo\Tables\PublisherEmails.sql" />
   </ItemGroup>
 </Project>

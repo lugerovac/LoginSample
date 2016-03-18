@@ -1,4 +1,5 @@
-﻿using Autofac;
+﻿using System.Web.Compilation;
+using Autofac;
 using InfoNovitas.LoginSample.Repositories;
 using InfoNovitas.LoginSample.Repositories.Users;
 using InfoNovitas.LoginSample.Services;
@@ -11,8 +12,10 @@ namespace InfoNovitas.LoginSample.Web.Api
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<UserRepository>().As<IUserRepository>();
-
             builder.RegisterType<UserService>().As<IUserService>();
+
+            builder.RegisterType<IPublisherRepository>().As<IPublisherRepository>();
+            builder.RegisterType<PublisherService>().As<IPublisherService>();
         }
     }
 }

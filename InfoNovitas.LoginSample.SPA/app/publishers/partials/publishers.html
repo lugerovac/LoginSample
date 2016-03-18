@@ -1,19 +1,19 @@
-﻿<h1 class="page-header">Publishers</h1>
+﻿<h1 class="page-header">Nakladnici</h1>
 
 
 <table>
     <thead>
         <tr>Id</tr>
         <tr>Name</tr>
-        <tr>Description</tr>
-        <tr>Url</tr>
+        <tr>Address</tr>
+        <tr>Web Page</tr>
     </thead>
     <tbody>
         <tr ng-repeat="p in publishers">
             <td>{{p.id}}</td>
             <td>{{p.name}}</td>
-            <td>{{p.description}}</td>
-            <td><a href="{{p.url}}">Link</a></td>
+            <td>{{p.address}}</td>
+            <td><a href="{{p.webPage}}">Link</a></td>
         </tr>
     </tbody>
 </table>
